@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Perfil</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+      }
+      
+      .profile-container {
+        background: linear-gradient(145deg, #ffffff, #e2e2e2);
+        width: 100%;
+        max-width: 900px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 30px;
+      }
+      
+      .profile-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e2e2e2;
+        padding-bottom: 20px;
+      }
+      
+      .profile-image {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #4CAF50;
+        margin-right: 20px;
+        transition: transform 0.3s ease;
+      }
+      
+      .profile-image:hover {
+        transform: scale(1.1);
+      }
+      
+      .profile-info {
+        font-size: 18px;
+        color: #333;
+      }
+      
+      .profile-info h1 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      
+      .profile-info p {
+        color: #777;
+        font-size: 16px;
+      }
+      
+      .profile-details {
+        margin-top: 20px;
+      }
+      
+      .profile-details h2 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      
+      .profile-details p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 8px;
+      }
+      
+      .profile-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      
+      .edit-btn,
+      .logout-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .edit-btn {
+        background: #4CAF50;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+      }
+      
+      .logout-btn {
+        background: #f44336;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+      }
+      
+      .edit-btn:hover {
+        background: #45a049;
+        transform: translateY(-3px);
+      }
+      
+      .logout-btn:hover {
+        background: #e53935;
+        transform: translateY(-3px);
+      }
+      
+      .edit-btn:focus,
+      .logout-btn:focus {
+        outline: none;
+      }
+      
+      .profile-actions button:active {
+        transform: translateY(2px);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(#30142b, #2772a1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+      }
+      
+      .profile-container {
+        background: linear-gradient(145deg, #ffffff, #e2e2e2);
+        width: 100%;
+        max-width: 900px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 30px;
+      }
+      
+      .profile-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e2e2e2;
+        padding-bottom: 20px;
+      }
+      
+      .profile-image {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #4CAF50;
+        margin-right: 20px;
+        transition: transform 0.3s ease;
+      }
+      
+      .profile-image:hover {
+        transform: scale(1.1);
+      }
+      
+      .profile-info {
+        font-size: 18px;
+        color: #333;
+      }
+      
+      .profile-info h1 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      
+      .profile-info p {
+        color: #777;
+        font-size: 16px;
+      }
+      
+      .profile-details {
+        margin-top: 20px;
+      }
+      
+      .profile-details h2 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      
+      .profile-details p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 8px;
+      }
+      
+      .profile-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      
+      .edit-btn,
+      .logout-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .edit-btn {
+        background: #4CAF50;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+      }
+      
+      .logout-btn {
+        background: #f44336;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+      }
+      
+      .edit-btn:hover {
+        background: #45a049;
+        transform: translateY(-3px);
+      }
+      
+      .logout-btn:hover {
+        background: #e53935;
+        transform: translateY(-3px);
+      }
+      
+      .edit-btn:focus,
+      .logout-btn:focus {
+        outline: none;
+      }
+      
+      .profile-actions button:active {
+        transform: translateY(2px);
+      }
+            
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="https://img.freepik.com/fotos-premium/personagem-m-na-ilustracao-3d-de-fundo-escuro_356060-4013.jpg" alt="Foto de Perfil" class="profile-image">
+      <div class="profile-info">
+        <h1>Miguel Viana</h1>
+        <p>@miguel027</p>
+      </div>
+    </div>
+    <div class="profile-details">
+      <h2>Informações</h2>
+      <p><strong>Email:</strong> miguelpinxs@gmail.com</p>
+      <p><strong>Idade:</strong> 14 anos</p>
+      <p><strong>Localização:</strong> São paulo, Sp</p>
+      <p><strong>Bio:</strong> Vendedor de contas de instagram tik tok entre outras redes sociais</p>
+    </div>
+    <div class="profile-actions">
+      <button type="submit" class="edit-btn">Editar Perfil</button>
+    <form action="/pagina_inicial" method="post">
+      <button class="logout-btn">Sair</button>
+    </form>
+    </div>
+  </div>
+</body>
+</html>
